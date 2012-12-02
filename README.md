@@ -11,7 +11,7 @@ So far, the only thing it does is replace the PHP server that comes with ImpactJ
 Run the following to install the server:
 
 ```bash
-go get https://github.com/geetarista/impact
+go get github.com/geetarista/impact
 ```
 
 Then just start the server:
