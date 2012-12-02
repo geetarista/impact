@@ -147,12 +147,16 @@ func saveHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	port := "8080"
+	if p := os.Getenv("PORT"); p != "" {
+		port = p
+	}
 	http.HandleFunc("/", fileHandler)
 	http.HandleFunc("/wm", fileHandler)
 	http.HandleFunc("/lib/weltmeister/api/glob.php", globHandler)
 	http.HandleFunc("/lib/weltmeister/api/browse.php", browseHandler)
 	http.HandleFunc("/lib/weltmeister/api/save.php", saveHandler)
 	http.HandleFunc("*", fileHandler)
-	fmt.Println("Started impact server at localhost:8080. Visit /wm for the weltmeister editor")
-	http.ListenAndServe(":8080", nil)
+	fmt.Println("Started impact server at localhost:" + port + "\nVisit /wm for the weltmeister editor")
+	http.ListenAndServe(":"+port, nil)
 }

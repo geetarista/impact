@@ -36,6 +36,14 @@ Then just start the server:
 impact
 ```
 
+## Server Port
+
+The default port the server will listen on is 8080, but you can override that like so:
+
+```bash
+PORT=8888 impact
+```
+
 ## Tests
 
 To run the tests, you just need Go installed on your system and just run:
