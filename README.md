@@ -36,6 +36,18 @@ Then just start the server:
 impact
 ```
 
+## Tests
+
+To run the tests, you just need Go installed on your system and just run:
+
+```bash
+go test
+```
+
+## Disclaimer
+
+This server has only been tested on Mac OS X for now, so if you discover issues on other platforms, please [create an issue](https://github.com/geetarista/impact/issues) so I can address them.
+
 ## License
 
 MIT. See `LICENSE`.
