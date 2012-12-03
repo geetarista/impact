@@ -10,7 +10,6 @@ import (
 	"os"
 	"path"
 	"path/filepath"
-	"strings"
 )
 
 var (
@@ -78,16 +77,12 @@ func globHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func browseHandler(w http.ResponseWriter, r *http.Request) {
-	dir := ""
+	dir := r.FormValue("dir")
 	var parent interface{}
-	if r.FormValue("dir") != "" {
-		dir = filepath.Dir(r.FormValue("dir") + "/")
-		dirs := strings.Split(dir, "/")
-		if dir != "" && len(dirs) > 1 {
-			parent = filepath.Base(strings.Join(dirs[0:len(dirs)-1], "/"))
-		} else {
-			parent = false
-		}
+	if dir != "" {
+		parent = filepath.Dir(dir)
+	} else {
+		parent = false
 	}
 
 	paths, err := filepath.Glob("./" + dir + "/*")
@@ -97,6 +92,10 @@ func browseHandler(w http.ResponseWriter, r *http.Request) {
 	for _, v := range paths {
 		stat, err := os.Stat(v)
 		printError(err)
+		filename := stat.Name()
+		if string(filename[0]) == "." {
+			continue
+		}
 		if stat.IsDir() == true {
 			dirs = append(dirs[:], v)
 		} else {
