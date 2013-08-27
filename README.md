@@ -8,9 +8,9 @@ So far, the only thing it does is replace the PHP server that comes with ImpactJ
 
 ### You do not have Go installed
 
-You can just download the [binary version](https://raw.github.com/geetarista/impact/master/impact).
+You can just download a [binary version](https://github.com/geetarista/impact/releases) for your platform.
 
-Then make it executable for your user:
+Then make the impact file executable for your user:
 
 ```bash
 chmod +x impact
