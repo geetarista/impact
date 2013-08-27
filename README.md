@@ -6,7 +6,7 @@ So far, the only thing it does is replace the PHP server that comes with ImpactJ
 
 ## Installation and Usage
 
-###. You do not have Go installed
+### You do not have Go installed
 
 You can just download the [binary version](https://raw.github.com/geetarista/impact/master/impact).
 
