@@ -103,7 +103,7 @@ func TestBrowseHandler(t *testing.T) {
 		{
 			"?dir=&type=",
 			200,
-			`{"dirs":["build","test"],"files":["LICENSE","Makefile","README.md","impact","index.html","server.go","server_test.go","version.go","weltmeister.html"],"parent":false}`,
+			`{"dirs":["test"],"files":["LICENSE","Makefile","README.md","impact","index.html","server.go","server_test.go","version.go","weltmeister.html"],"parent":false}`,
 		},
 	}
 
