@@ -1,8 +1,8 @@
-build:
-	@goxc
-
 test:
 	@go test ./...
 	@if [ -f impact.test ]; then rm impact.test; fi
 
-.PHONY: test
+build:
+	@goxc
+
+.PHONY: build, test
