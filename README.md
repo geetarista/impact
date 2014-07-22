@@ -1,4 +1,4 @@
-# Go Impact ![Build Status](https://travis-ci.org/geetarista/impact.png?branch=master)
+# Go Impact [![Build Status](https://drone.io/github.com/geetarista/impact/status.png)](https://drone.io/github.com/geetarista/impact/latest)
 
 This is a server written in [Go](http://golang.org) for the [ImpactJS](http://impactjs.com/) game engine.
 
